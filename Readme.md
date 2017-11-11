@@ -1,6 +1,6 @@
 ## datamuse-swift
 
-[![Platforms](https://img.shields.io/cocoapods/p/datamuse-swift.svg)](https://cocoapods.org/pods/datamuse-swift)
+<!--[![Platforms](https://img.shields.io/cocoapods/p/datamuse-swift.svg)](https://cocoapods.org/pods/datamuse-swift)-->
 [![License](https://img.shields.io/cocoapods/l/datamuse-swift.svg)](https://raw.githubusercontent.com/ezefranca/datamuse-swift/master/LICENSE)
 
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
@@ -82,49 +82,7 @@ let package = Package(
 
 ### Manually
 
-If you prefer not to use either of the aforementioned dependency managers, you can integrate datamuse-swift into your project manually.
-
-#### Git Submodules
-
-- Open up Terminal, `cd` into your top-level project directory, and run the following command "if" your project is not initialized as a git repository:
-
-```bash
-$ git init
-```
-
-- Add datamuse-swift as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
-
-```bash
-$ git submodule add https://github.com/ezefranca/datamuse-swift.git
-$ git submodule update --init --recursive
-```
-
-- Open the new `datamuse-swift` folder, and drag the `datamuse-swift.xcodeproj` into the Project Navigator of your application's Xcode project.
-
-    > It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode groups does not matter.
-
-- Select the `datamuse-swift.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
-- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
-- In the tab bar at the top of that window, open the "General" panel.
-- Click on the `+` button under the "Embedded Binaries" section.
-- You will see two different `datamuse-swift.xcodeproj` folders each with two different versions of the `datamuse-swift.framework` nested inside a `Products` folder.
-
-    > It does not matter which `Products` folder you choose from.
-
-- Select the `datamuse-swift.framework`.
-
-- And that's it!
-
-> The `datamuse-swift.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
-
-#### Embeded Binaries
-
-- Download the latest release from https://github.com/ezefranca/datamuse-swift/releases
-- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
-- In the tab bar at the top of that window, open the "General" panel.
-- Click on the `+` button under the "Embedded Binaries" section.
-- Add the downloaded `datamuse-swift.framework`.
-- And that's it!
+If you prefer not to use either of the aforementioned dependency managers, you can integrate datamuse-swift into your project manually. Just copy the `Core` folder to your project.
 
 ## Usage
 
