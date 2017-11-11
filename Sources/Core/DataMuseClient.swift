@@ -284,7 +284,7 @@ extension DataMuseClient {
     }
     
     internal func _wordsThatRhyme(with: String, _ completionHandler: @escaping RequestCompletion) {
-        GET("\("/words??rel_rhy=")\(with)", completionHandler)
+        GET("\("/words?rel_rhy=")\(with)", completionHandler)
     }
     
     internal func _wordsThatRhyme(with: String, related: String, _ completionHandler: @escaping RequestCompletion) {
