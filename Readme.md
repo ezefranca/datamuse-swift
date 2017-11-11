@@ -92,7 +92,7 @@ You just need a instace of `DataMuseClient` and can start you calls.
 let client = DataMuseClient()
 ```
 
-All calls return an `[Words]`.  The words are a struct with the score result of API and the word string:
+All calls return a `[Words]`.  The words are a struct with the score result of API and the word string:
 
 ```swift
 public struct Words : Codable {
