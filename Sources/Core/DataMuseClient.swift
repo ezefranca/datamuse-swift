@@ -133,6 +133,23 @@ public struct DataMuseClient {
             completion(_words, error)
         }
     }
+
+    /// Returns an array of words that rhyme with ***with*** related with ***related***
+    ///
+    /// - Parameters:
+    ///   - with: word to compare
+    ///   - related: related word
+    ///   - completion: completion block with array of words
+    public func wordsThatRhyme(with: String, related: String, completion: @escaping ([Words]?, NSError?) -> Void) {
+        
+        self._wordsThatRhyme(with: with, related: related) { (words, error) in
+            guard let _words = words else {
+                completion(nil, nil)
+                return
+            }
+            completion(_words, error)
+        }
+    }
     
     
     /// Returns an array of words adjectives that are often used to describe ***to***
@@ -268,6 +285,10 @@ extension DataMuseClient {
     
     internal func _wordsThatRhyme(with: String, _ completionHandler: @escaping RequestCompletion) {
         GET("\("/words??rel_rhy=")\(with)", completionHandler)
+    }
+    
+    internal func _wordsThatRhyme(with: String, related: String, _ completionHandler: @escaping RequestCompletion) {
+        GET("\("/words?ml=")\(with)\("?rel_rhy=")\(related)", completionHandler)
     }
     
     internal func _adjectivesThatAreOften(to: String, _ completionHandler: @escaping RequestCompletion) {
