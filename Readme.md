@@ -88,7 +88,7 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 
 ## Usage
 
-You just need a instace of `DataMuseClient` and can start you calls.
+You just need a instace of `DataMuseClient` and can start yours calls.
 
 ```swift
 let client = DataMuseClient()
