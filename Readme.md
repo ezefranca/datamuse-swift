@@ -4,13 +4,14 @@
 [![License](https://img.shields.io/cocoapods/l/datamuse-swift.svg)](https://raw.githubusercontent.com/ezefranca/datamuse-swift/master/LICENSE)
 
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+<!--[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)-->
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/datamuse-swift.svg)](https://cocoapods.org/pods/datamuse-swift)
 
 [![Travis](https://img.shields.io/travis/ezefranca/datamuse-swift/master.svg)](https://travis-ci.org/ezefranca/datamuse-swift/branches)
-[![JetpackSwift](https://img.shields.io/badge/JetpackSwift-framework-red.svg)](http://github.com/JetpackSwift/Framework)
 
-a datamuse api swift wrapper without dependecies
+[![logo](https://www.datamuse.com/api/datamuse-logo-rgb.png)](https://www.datamuse.com/api/)
+
+A datamuse api swift wrapper without dependecies
 
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -19,7 +20,7 @@ a datamuse api swift wrapper without dependecies
 
 ## Requirements
 
-- iOS 8.0+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 2.0+
+- iOS 9.3+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 4.0+
 - Xcode 9.0+
 
 ## Installation
