@@ -1,0 +1,6 @@
+framework module Pods_datamuse_swift_Example {
+  umbrella header "Pods-datamuse-swift_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

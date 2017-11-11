@@ -1,0 +1,6 @@
+framework module datamuse_swift {
+  umbrella header "datamuse-swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
