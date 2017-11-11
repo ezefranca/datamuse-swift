@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
 s.homepage = 'http://ezefranca.com'
  s.social_media_url = 'https://twitter.com/ezefranca'
  s.authors = { "Ezequiel França" => "ezequiel.ifsp@gmail.com" }
- s.source = { :git => "https://github.com/ezefranca/datamuse-swift.git", :tag => "v"+s.version.to_s }
+ s.source = { :git => "https://github.com/ezefranca/datamuse-swift.git", :tag => s.version.to_s }
  s.platforms = { :ios => "8.0", :osx => "10.10", :tvos => "9.0", :watchos => "2.0" }
  s.requires_arc = true
 
