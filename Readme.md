@@ -13,6 +13,8 @@
 
 A datamuse api swift wrapper without dependencies
 
+![](https://media.giphy.com/media/xT1R9zyKuQM9ga0ZK8/giphy.gif)
+
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
