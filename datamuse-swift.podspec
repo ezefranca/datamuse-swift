@@ -1,12 +1,13 @@
 Pod::Spec.new do |s|
  s.name = 'datamuse-swift'
- s.version = '0.0.2'
+ s.version = '0.0.3'
  s.license = { :type => "MIT", :file => "LICENSE" }
  s.summary = 'A datamuse api swift wrapper without dependencies'
- s.social_media_url = 'https://twitter.com/ezefranca'
+ s.homepage = 'http://ezefranca.com'
+ s.social_media_url = 'ttps://github.com/ezefranca/datamuse-swift'
  s.authors = { "Ezequiel França" => "ezequiel.ifsp@gmail.com" }
  s.source = { :git => "https://github.com/ezefranca/datamuse-swift.git", :tag => s.version.to_s }
- s.platforms = { :ios => "8.0", :osx => "10.10", :tvos => "9.0", :watchos => "2.0" }
+ s.platforms = { :ios => "9.3", :osx => "10.10", :tvos => "9.0", :watchos => "4.0" }
  s.requires_arc = true
 
  s.default_subspec = "Core"
