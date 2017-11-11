@@ -21,10 +21,6 @@
 		354AD5871F8A659800B18FAE /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 354AD5851F8A659800B18FAE /* Nimble.framework */; };
 		354AD5881F8A65B500B18FAE /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 354AD5851F8A659800B18FAE /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		354AD5891F8A65B500B18FAE /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 354AD5841F8A659800B18FAE /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		359649031FB18CC000FC7ADC /* datamuse-swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359649021FB18CBF00FC7ADC /* datamuse-swift.swift */; };
-		359649041FB18CC000FC7ADC /* datamuse-swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359649021FB18CBF00FC7ADC /* datamuse-swift.swift */; };
-		359649051FB18CC000FC7ADC /* datamuse-swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359649021FB18CBF00FC7ADC /* datamuse-swift.swift */; };
-		359649061FB18CC000FC7ADC /* datamuse-swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359649021FB18CBF00FC7ADC /* datamuse-swift.swift */; };
 		35B7422F1F82A5E000829B21 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35B7422D1F82A5DF00829B21 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		35B742301F82A5E000829B21 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35B7422E1F82A5E000829B21 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		35B742311F82A5EC00829B21 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B7422D1F82A5DF00829B21 /* Nimble.framework */; };
@@ -33,6 +29,18 @@
 		35B742371F82A61E00829B21 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 35B742351F82A61E00829B21 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		35B742381F82A62900829B21 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B742341F82A61D00829B21 /* Nimble.framework */; };
 		35B742391F82A62900829B21 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B742351F82A61E00829B21 /* Quick.framework */; };
+		8B7138161FB72D510009D5FF /* DataMuseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7138131FB72D510009D5FF /* DataMuseClient.swift */; };
+		8B7138171FB72D510009D5FF /* DataMuseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7138131FB72D510009D5FF /* DataMuseClient.swift */; };
+		8B7138181FB72D510009D5FF /* DataMuseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7138131FB72D510009D5FF /* DataMuseClient.swift */; };
+		8B7138191FB72D510009D5FF /* DataMuseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7138131FB72D510009D5FF /* DataMuseClient.swift */; };
+		8B71381A1FB72D510009D5FF /* DataRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7138141FB72D510009D5FF /* DataRequester.swift */; };
+		8B71381B1FB72D510009D5FF /* DataRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7138141FB72D510009D5FF /* DataRequester.swift */; };
+		8B71381C1FB72D510009D5FF /* DataRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7138141FB72D510009D5FF /* DataRequester.swift */; };
+		8B71381D1FB72D510009D5FF /* DataRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7138141FB72D510009D5FF /* DataRequester.swift */; };
+		8B71381E1FB72D510009D5FF /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7138151FB72D510009D5FF /* Words.swift */; };
+		8B71381F1FB72D510009D5FF /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7138151FB72D510009D5FF /* Words.swift */; };
+		8B7138201FB72D510009D5FF /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7138151FB72D510009D5FF /* Words.swift */; };
+		8B7138211FB72D510009D5FF /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7138151FB72D510009D5FF /* Words.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,25 +108,27 @@
 
 /* Begin PBXFileReference section */
 		3549BB171DA3890B00C63030 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3549BB181DA3890B00C63030 /* datamuse-swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = datamuse-swift.h; sourceTree = "<group>"; };
-		3549BB211DA389CD00C63030 /* datamuse-swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = datamuse-swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3549BB2E1DA389DB00C63030 /* datamuse-swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = datamuse-swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3549BB3B1DA389E800C63030 /* datamuse-swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = datamuse-swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3549BB481DA389F300C63030 /* datamuse-swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = datamuse-swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3549BB181DA3890B00C63030 /* datamuse-swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "datamuse-swift.h"; sourceTree = "<group>"; };
+		3549BB211DA389CD00C63030 /* datamuse-swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "datamuse-swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3549BB2E1DA389DB00C63030 /* datamuse-swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "datamuse-swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3549BB3B1DA389E800C63030 /* datamuse-swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "datamuse-swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3549BB481DA389F300C63030 /* datamuse-swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "datamuse-swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3549BB551DA38A5E00C63030 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		3549BB571DA38A8800C63030 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		3549BB581DA38A8800C63030 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3549BB611DA38ADB00C63030 /* datamuse-swiftTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "datamuse-swiftTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3549BB701DA38AEF00C63030 /* datamuse-swiftTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "datamuse-swiftTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3549BB7F1DA38B0000C63030 /* datamuse-swiftTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "datamuse-swiftTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3549BB8A1DA38C0A00C63030 /* datamuse-swiftSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = datamuse-swiftSpec.swift; sourceTree = "<group>"; };
+		3549BB8A1DA38C0A00C63030 /* datamuse-swiftSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "datamuse-swiftSpec.swift"; sourceTree = "<group>"; };
 		354AD5841F8A659800B18FAE /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
 		354AD5851F8A659800B18FAE /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
-		359649021FB18CBF00FC7ADC /* datamuse-swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = datamuse-swift.swift; sourceTree = "<group>"; };
 		35B7422D1F82A5DF00829B21 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		35B7422E1F82A5E000829B21 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		35B742341F82A61D00829B21 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		35B742351F82A61E00829B21 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		8B7138131FB72D510009D5FF /* DataMuseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataMuseClient.swift; sourceTree = "<group>"; };
+		8B7138141FB72D510009D5FF /* DataRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequester.swift; sourceTree = "<group>"; };
+		8B7138151FB72D510009D5FF /* Words.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,7 +270,9 @@
 		359649011FB18CBF00FC7ADC /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				359649021FB18CBF00FC7ADC /* datamuse-swift.swift */,
+				8B7138131FB72D510009D5FF /* DataMuseClient.swift */,
+				8B7138141FB72D510009D5FF /* DataRequester.swift */,
+				8B7138151FB72D510009D5FF /* Words.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -559,7 +571,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				359649031FB18CC000FC7ADC /* datamuse-swift.swift in Sources */,
+				8B7138161FB72D510009D5FF /* DataMuseClient.swift in Sources */,
+				8B71381E1FB72D510009D5FF /* Words.swift in Sources */,
+				8B71381A1FB72D510009D5FF /* DataRequester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +581,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				359649061FB18CC000FC7ADC /* datamuse-swift.swift in Sources */,
+				8B7138191FB72D510009D5FF /* DataMuseClient.swift in Sources */,
+				8B7138211FB72D510009D5FF /* Words.swift in Sources */,
+				8B71381D1FB72D510009D5FF /* DataRequester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,7 +591,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				359649041FB18CC000FC7ADC /* datamuse-swift.swift in Sources */,
+				8B7138171FB72D510009D5FF /* DataMuseClient.swift in Sources */,
+				8B71381F1FB72D510009D5FF /* Words.swift in Sources */,
+				8B71381B1FB72D510009D5FF /* DataRequester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,7 +601,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				359649051FB18CC000FC7ADC /* datamuse-swift.swift in Sources */,
+				8B7138181FB72D510009D5FF /* DataMuseClient.swift in Sources */,
+				8B7138201FB72D510009D5FF /* Words.swift in Sources */,
+				8B71381C1FB72D510009D5FF /* DataRequester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,8 +781,8 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.datamuse-api.datamuse-swift;
-				PRODUCT_NAME = datamuse-swift;
+				PRODUCT_BUNDLE_IDENTIFIER = "ezefranca.com.datamuse-api.datamuse-swift";
+				PRODUCT_NAME = "datamuse-swift";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -780,8 +800,8 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.datamuse-api.datamuse-swift;
-				PRODUCT_NAME = datamuse-swift;
+				PRODUCT_BUNDLE_IDENTIFIER = "ezefranca.com.datamuse-api.datamuse-swift";
+				PRODUCT_NAME = "datamuse-swift";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -798,8 +818,8 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.datamuse-api.datamuse-swift;
-				PRODUCT_NAME = datamuse-swift;
+				PRODUCT_BUNDLE_IDENTIFIER = "ezefranca.com.datamuse-api.datamuse-swift";
+				PRODUCT_NAME = "datamuse-swift";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -820,8 +840,8 @@
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.datamuse-api.datamuse-swift;
-				PRODUCT_NAME = datamuse-swift;
+				PRODUCT_BUNDLE_IDENTIFIER = "ezefranca.com.datamuse-api.datamuse-swift";
+				PRODUCT_NAME = "datamuse-swift";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -843,8 +863,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.datamuse-api.datamuse-swift;
-				PRODUCT_NAME = datamuse-swift;
+				PRODUCT_BUNDLE_IDENTIFIER = "ezefranca.com.datamuse-api.datamuse-swift";
+				PRODUCT_NAME = "datamuse-swift";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -865,8 +885,8 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.datamuse-api.datamuse-swift;
-				PRODUCT_NAME = datamuse-swift;
+				PRODUCT_BUNDLE_IDENTIFIER = "ezefranca.com.datamuse-api.datamuse-swift";
+				PRODUCT_NAME = "datamuse-swift";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -883,8 +903,8 @@
 				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.datamuse-api.datamuse-swift;
-				PRODUCT_NAME = datamuse-swift;
+				PRODUCT_BUNDLE_IDENTIFIER = "ezefranca.com.datamuse-api.datamuse-swift";
+				PRODUCT_NAME = "datamuse-swift";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -904,8 +924,8 @@
 				INFOPLIST_FILE = "Sources/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.datamuse-api.datamuse-swift;
-				PRODUCT_NAME = datamuse-swift;
+				PRODUCT_BUNDLE_IDENTIFIER = "ezefranca.com.datamuse-api.datamuse-swift";
+				PRODUCT_NAME = "datamuse-swift";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -924,7 +944,7 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.datamuse-api.datamuse-swiftTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "ezefranca.com.datamuse-api.datamuse-swiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -941,7 +961,7 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.datamuse-api.datamuse-swiftTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "ezefranca.com.datamuse-api.datamuse-swiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -957,7 +977,7 @@
 				);
 				INFOPLIST_FILE = "Tests/Info-tvOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.datamuse-api.datamuse-swiftTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "ezefranca.com.datamuse-api.datamuse-swiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -976,7 +996,7 @@
 				);
 				INFOPLIST_FILE = "Tests/Info-tvOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.datamuse-api.datamuse-swiftTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "ezefranca.com.datamuse-api.datamuse-swiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -996,7 +1016,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.datamuse-api.datamuse-swiftTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "ezefranca.com.datamuse-api.datamuse-swiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1016,7 +1036,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = ezefranca.com.datamuse-api.datamuse-swiftTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "ezefranca.com.datamuse-api.datamuse-swiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
