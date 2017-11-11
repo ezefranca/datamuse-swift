@@ -127,6 +127,89 @@ $ git submodule update --init --recursive
 
 ## Usage
 
+You just need a instace of `DataMuseClient` and can start you calls.
+
+```swift
+let client = DataMuseClient()
+```
+
+All calls return an `[Words]`.  The words are a struct with the score result of API and the word string:
+
+```swift
+public struct Words : Codable {
+    public let word : String?
+    public let score : Int?
+}
+```
+
+### List with all methods:
+
+ - words with a meaning similar to ringing in the ears
+```swift
+public func wordMeaningSimilar(to: String, completion: @escaping ([Words]?, NSError?) -> Void)
+```
+- words related to duck that start with the letter b
+```swift
+public func wordRelated(to: String, startedWith: String, completion: @escaping ([Words]?, NSError?) -> Void)
+
+```
+- words related to spoon that end with the letter a
+```swift
+public func wordRelated(to: String, finishedWith: String, completion: @escaping ([Words]?, NSError?) -> Void)
+
+```
+- words that sound like elefint
+```swift
+public func wordSoundsLike(to: String, completion: @escaping ([Words]?, NSError?) -> Void)
+
+```
+- words that start with t, end in k, and have two letters in between
+```swift
+public func word(start: String, finish: String, numberofLettersBetween: Int, completion: @escaping ([Words]?, NSError?) -> Void)
+```
+- words that are spelled similarly to coneticut
+```swift
+public func wordsSpelledSimilarly(to: String, completion: @escaping ([Words]?, NSError?) -> Void)
+
+```
+- words that rhyme with forgetful
+```swift
+public func wordsThatRhyme(with: String, completion: @escaping ([Words]?, NSError?) -> Void)
+
+```
+- words that rhyme with grape that are related to breakfast
+```swift
+public func wordsThatRhyme(with: String, related: String, completion: @escaping ([Words]?, NSError?) -> Void)
+
+```
+- adjectives that are often used to describe ocean
+```swift
+public func adjectivesThatAreOften(to: String, completion: @escaping ([Words]?, NSError?) -> Void)
+
+```
+- adjectives describing ocean sorted by how related they are to temperature
+```swift
+public func adjectivesThatDescribing(this: String, related: String, completion: @escaping ([Words]?, NSError?) -> Void)
+
+```
+
+- nouns that are often described by the adjective yellow
+```swift
+public func nounsThatAreOftenDescribed(by: String, completion: @escaping ([Words]?, NSError?) -> Void)
+
+```
+- words that often follow "drink" in a sentence, that start with the letter w
+```swift
+public func wordThatOften(follow: String, start: String, completion: @escaping ([Words]?, NSError?) -> Void)
+```
+- words that are triggered by (strongly associated with) the word "cow"
+```swift
+public func wordsThatAreTriggered(by: String, completion: @escaping ([Words]?, NSError?) -> Void)
+```
+- suggestions for the user if they have typed in rawand so far
+```swift
+public func suggestionsBased(into: String, completion: @escaping ([Words]?, NSError?) -> Void)
+```
 ## License
 
 datamuse-swift is released under the MIT license. See [LICENSE](https://github.com/ezefranca/datamuse-swift/blob/master/LICENSE) for details.
