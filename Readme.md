@@ -11,7 +11,7 @@
 
 [![logo](https://www.datamuse.com/api/datamuse-logo-rgb.png)](https://www.datamuse.com/api/)
 
-A datamuse api swift wrapper without dependecies
+A datamuse api swift wrapper without dependencies
 
 - [Requirements](#requirements)
 - [Installation](#installation)

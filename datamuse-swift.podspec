@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
  s.name = 'datamuse-swift'
  s.version = '0.0.1'
  s.license = { :type => "MIT", :file => "LICENSE" }
- s.summary = 'A datamuse api swift wrapper without dependecies'
+ s.summary = 'A datamuse api swift wrapper without dependencies'
 s.homepage = 'http://ezefranca.com'
  s.social_media_url = 'https://twitter.com/ezefranca'
  s.authors = { "Ezequiel França" => "ezequiel.ifsp@gmail.com" }
