@@ -1,13 +1,8 @@
 ## datamuse-swift
 
 <!--[![Platforms](https://img.shields.io/cocoapods/p/datamuse-swift.svg)](https://cocoapods.org/pods/datamuse-swift)-->
-[![License](https://img.shields.io/cocoapods/l/datamuse-swift.svg)](https://raw.githubusercontent.com/ezefranca/datamuse-swift/master/LICENSE)
-
-[![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
+[![License](https://img.shields.io/cocoapods/l/datamuse-swift.svg)](https://raw.githubusercontent.com/ezefranca/datamuse-swift/master/LICENSE)[![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)[![CocoaPods compatible](https://img.shields.io/cocoapods/v/datamuse-swift.svg)](https://cocoapods.org/pods/datamuse-swift)[![Travis](https://img.shields.io/travis/ezefranca/datamuse-swift/master.svg)](https://travis-ci.org/ezefranca/datamuse-swift/branches)
 <!--[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)-->
-[![CocoaPods compatible](https://img.shields.io/cocoapods/v/datamuse-swift.svg)](https://cocoapods.org/pods/datamuse-swift)
-
-[![Travis](https://img.shields.io/travis/ezefranca/datamuse-swift/master.svg)](https://travis-ci.org/ezefranca/datamuse-swift/branches)
 
 [![logo](https://www.datamuse.com/api/datamuse-logo-rgb.png)](https://www.datamuse.com/api/)
 
@@ -39,10 +34,10 @@ To integrate datamuse-swift into your Xcode project using CocoaPods, specify it 
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+platform :ios, '9.3'
 use_frameworks!
 
-pod 'datamuse-swift', '~> 0.0.1'
+pod 'datamuse-swift', '~> 0.0.5'
 ```
 
 Then, run the following command:
@@ -94,7 +89,7 @@ You just need a instace of `DataMuseClient` and can start yours calls.
 let client = DataMuseClient()
 ```
 
-All calls returns a `[Words]`.  The `Word` are a struct with the score result of API and the word string:
+All calls returns a `[Words]`. The `Words` are a struct with the score result of API and the word string:
 
 ```swift
 public struct Words : Codable {
