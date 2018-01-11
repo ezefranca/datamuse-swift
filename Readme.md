@@ -1,8 +1,11 @@
 ## datamuse-swift
 
-<!--[![Platforms](https://img.shields.io/cocoapods/p/datamuse-swift.svg)](https://cocoapods.org/pods/datamuse-swift)-->
-[![License](https://img.shields.io/cocoapods/l/datamuse-swift.svg)](https://raw.githubusercontent.com/ezefranca/datamuse-swift/master/LICENSE)[![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)[![CocoaPods compatible](https://img.shields.io/cocoapods/v/datamuse-swift.svg)](https://cocoapods.org/pods/datamuse-swift)[![Travis](https://img.shields.io/travis/ezefranca/datamuse-swift/master.svg)](https://travis-ci.org/ezefranca/datamuse-swift/branches)
-<!--[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)-->
+[![Platforms](https://img.shields.io/cocoapods/p/datamuse-swift.svg)](https://cocoapods.org/pods/datamuse-swift)
+[![License](https://img.shields.io/cocoapods/l/datamuse-swift.svg)](https://raw.githubusercontent.com/ezefranca/datamuse-swift/master/LICENSE)
+[![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
+[![CocoaPods compatible](https://img.shields.io/cocoapods/v/datamuse-swift.svg)](https://cocoapods.org/pods/datamuse-swift)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Travis](https://img.shields.io/travis/ezefranca/datamuse-swift/master.svg)](https://travis-ci.org/ezefranca/datamuse-swift/branches)
 
 [![logo](https://www.datamuse.com/api/datamuse-logo-rgb.png)](https://www.datamuse.com/api/)
 
