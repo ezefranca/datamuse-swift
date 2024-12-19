@@ -1,24 +1,18 @@
 PODS:
-  - datamuse-swift (0.0.1):
-    - datamuse-swift/Core (= 0.0.1)
-  - datamuse-swift/Core (0.0.1)
-  - Nimble (7.0.2)
-  - Quick (1.2.0)
+  - datamuse-swift (0.0.6):
+    - datamuse-swift/Core (= 0.0.6)
+  - datamuse-swift/Core (0.0.6)
 
 DEPENDENCIES:
   - datamuse-swift (from `../`)
-  - Nimble (~> 7.0.2)
-  - Quick (~> 1.2.0)
 
 EXTERNAL SOURCES:
   datamuse-swift:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  datamuse-swift: f570d6150e1d334ec845a08a70b39c2f2f5bfa59
-  Nimble: bfe1f814edabba69ff145cb1283e04ed636a67f2
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  datamuse-swift: 8e7104f7ab8deb8ba294f61cbbc86784d290ff16
 
-PODFILE CHECKSUM: 8e4a08ac2f4c5c36dca63b1a124b27d61be4d0b5
+PODFILE CHECKSUM: 948e08a83e6325dbec62d20cce142741ad61ee35
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.15.2

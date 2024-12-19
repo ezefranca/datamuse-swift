@@ -10,34 +10,41 @@ import UIKit
 import datamuse_swift
 
 class ViewController: UIViewController {
-    
+
     @IBOutlet var input: UITextField!
     @IBOutlet var result: UITextView!
     @IBOutlet var search: UIButton!
+    
+    private let dataMuseClient = DataMuseClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func searchTapped(_ sender: UIButton) {
-        self.result.text = ""
-        if let text = input.text {
-            DataMuseClient().wordMeaningSimilar(to: text) { (words, error) in
-                if let _words = words {
-                    for word in _words {
-                        if let w = word.word {
-                            DispatchQueue.main.sync {
-                                self.result.text.append("\("\n")\(w)")
-                            }
-                       }
+        guard let text = input.text, !text.isEmpty else {
+            result.text = "Please enter a word to search."
+            return
+        }
+        
+        result.text = "Searching..."
+        
+        Task {
+            do {
+                let words = try await dataMuseClient.fetchWords(endpoint: .similarWords(to: text))
+                
+                DispatchQueue.main.async {
+                    if words.isEmpty {
+                        self.result.text = "No similar words found."
+                    } else {
+                        self.result.text = words.map { $0.word }.joined(separator: "\n")
                     }
-                } else {
-                    DispatchQueue.main.sync {
-                        self.result.text = "error"
-                    }
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.result.text = "An error occurred: \(error.localizedDescription)"
                 }
             }
         }
     }
 }
-

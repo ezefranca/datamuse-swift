@@ -1,174 +1,120 @@
-## datamuse-swift
+# datamuse-swift
 
 [![Platforms](https://img.shields.io/cocoapods/p/datamuse-swift.svg)](https://cocoapods.org/pods/datamuse-swift)
 [![License](https://img.shields.io/cocoapods/l/datamuse-swift.svg)](https://raw.githubusercontent.com/ezefranca/datamuse-swift/master/LICENSE)
 [![Swift Package Manager](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![CocoaPods compatible](https://img.shields.io/cocoapods/v/datamuse-swift.svg)](https://cocoapods.org/pods/datamuse-swift)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Travis](https://img.shields.io/travis/ezefranca/datamuse-swift/master.svg)](https://travis-ci.org/ezefranca/datamuse-swift/branches)
 
 [![logo](https://www.datamuse.com/api/datamuse-logo-rgb.png)](https://www.datamuse.com/api/)
 
-A datamuse api swift wrapper without dependencies
-
-![](https://media.giphy.com/media/xT1R9zyKuQM9ga0ZK8/giphy.gif)
+A Datamuse API Swift wrapper without external depedencies and support for async/await.
 
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Methods](#methods)
 - [License](#license)
 
 ## Requirements
 
-- iOS 9.3+ / Mac OS X 10.10+ / tvOS 9.0+ / watchOS 4.0+
-- Xcode 9.0+
+- iOS 15+ / macOS 12+ / tvOS 15+ / watchOS 8+
+- Xcode 15.0+
 
 ## Installation
 
+### Swift Package Manager
+
+To integrate `datamuse-swift` into your Xcode project, open your project settings, navigate to the "Package Dependencies" section, and add the following URL:
+
+```
+https://github.com/ezefranca/datamuse-swift.git
+```
+
 ### CocoaPods
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
-
-```bash
-$ gem install cocoapods
-```
-
-To integrate datamuse-swift into your Xcode project using CocoaPods, specify it in your `Podfile`:
+Add the following to your `Podfile`:
 
 ```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.3'
+platform :ios, '15.0'
 use_frameworks!
 
-pod 'datamuse-swift', '~> 0.0.5'
+pod 'datamuse-swift', '~> 1.0.0'
 ```
 
-Then, run the following command:
+Run the following command to install the dependency:
 
 ```bash
 $ pod install
 ```
 
-### Carthage
+### Manual Installation
 
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
-
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-```bash
-$ brew update
-$ brew install carthage
-```
-
-To integrate datamuse-swift into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "datamuse-swift/datamuse-swift" ~> 0.0.1
-```
-### Swift Package Manager
-
-To use datamuse-swift as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following in your Package.swift file.
-
-``` swift
-import PackageDescription
-
-let package = Package(
-    name: "Hellodatamuse-swift",
-    dependencies: [
-        .Package(url: "https://github.com/ezefranca/datamuse-swift.git", "0.0.1")
-    ]
-)
-```
-
-### Manually
-
-If you prefer not to use either of the aforementioned dependency managers, you can integrate datamuse-swift into your project manually. Just copy the `Core` folder to your project.
+Clone the repository and drag the `Sources` folder into your Xcode project.
 
 ## Usage
 
-You just need a instace of `DataMuseClient` and can start yours calls.
+### Getting Started
+
+First, import the library:
+
+```swift
+import datamuse_swift
+```
+
+Create an instance of `DataMuseClient`:
 
 ```swift
 let client = DataMuseClient()
 ```
 
-All calls returns a `[Words]`. The `Words` are a struct with the score result of API and the word string:
+### Fetching Words
+
+Use the `fetchWords` method with any of the predefined endpoints.
+
+#### Example: Fetch Similar Words
 
 ```swift
-public struct Words : Codable {
-    public let word : String?
-    public let score : Int?
+Task {
+    do {
+        let words = try await client.fetchWords(endpoint: .similarWords(to: "ring"))
+        words.forEach { print($0.word) }
+    } catch {
+        print("Error: \(error.localizedDescription)")
+    }
 }
 ```
 
-### List with all methods:
+## Methods
 
- - words with a meaning similar to ringing in the ears
-```swift
-public func wordMeaningSimilar(to: String, completion: @escaping ([Words]?, NSError?) -> Void)
-```
-- words related to duck that start with the letter b
-```swift
-public func wordRelated(to: String, startedWith: String, completion: @escaping ([Words]?, NSError?) -> Void)
+The following endpoints are available:
 
-```
-- words related to spoon that end with the letter a
-```swift
-public func wordRelated(to: String, finishedWith: String, completion: @escaping ([Words]?, NSError?) -> Void)
+| Description                                                   | Method                                                                                       |
+|---------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| Words with a meaning similar to a given word                 | `.similarWords(to: String)`                                                                 |
+| Words related to a word that start with a specific letter    | `.wordsRelated(to: String, startingWith: String)`                                           |
+| Words related to a word that end with a specific letter      | `.wordsEndingWith(to: String, endingWith: String)`                                          |
+| Words spelled similarly to a given word                     | `.wordsSpelledLike(String)`                                                                 |
+| Words that rhyme with a given word                          | `.wordsThatRhyme(with: String)`                                                             |
+| Words that rhyme with a given word and are related          | `.wordsThatRhymeWithRelated(with: String, related: String)`                                 |
+| Adjectives often used to describe a word                   | `.adjectivesOftenUsed(toDescribe: String)`                                                  |
+| Adjectives describing a word sorted by related topics       | `.adjectivesDescribing(this: String, related: String)`                                      |
+| Nouns often described by a given adjective                 | `.nounsOftenDescribed(byAdjective: String)`                                                 |
+| Words that often follow another word in a sentence          | `.wordsThatFollow(following: String, startingWith: String)`                                 |
+| Words triggered by (strongly associated with) another word | `.wordsTriggered(by: String)`                                                              |
+| Suggestions based on partial input                         | `.suggestions(for: String)`                                                                |
+| Words that start, finish, and have a specific pattern      | `.wordWithPattern(start: String, finish: String, lettersBetween: Int)`                     |
 
-```
-- words that sound like elefint
-```swift
-public func wordSoundsLike(to: String, completion: @escaping ([Words]?, NSError?) -> Void)
+### Word Model
 
-```
-- words that start with t, end in k, and have two letters in between
-```swift
-public func word(start: String, finish: String, numberofLettersBetween: Int, completion: @escaping ([Words]?, NSError?) -> Void)
-```
-- words that are spelled similarly to coneticut
-```swift
-public func wordsSpelledSimilarly(to: String, completion: @escaping ([Words]?, NSError?) -> Void)
+All API responses return an array of `Word` objects:
 
-```
-- words that rhyme with forgetful
 ```swift
-public func wordsThatRhyme(with: String, completion: @escaping ([Words]?, NSError?) -> Void)
-
-```
-- words that rhyme with grape that are related to breakfast
-```swift
-public func wordsThatRhyme(with: String, related: String, completion: @escaping ([Words]?, NSError?) -> Void)
-
-```
-- adjectives that are often used to describe ocean
-```swift
-public func adjectivesThatAreOften(to: String, completion: @escaping ([Words]?, NSError?) -> Void)
-
-```
-- adjectives describing ocean sorted by how related they are to temperature
-```swift
-public func adjectivesThatDescribing(this: String, related: String, completion: @escaping ([Words]?, NSError?) -> Void)
-
+public struct Word: Codable {
+    public let word: String
+    public let score: Int?
+}
 ```
 
-- nouns that are often described by the adjective yellow
-```swift
-public func nounsThatAreOftenDescribed(by: String, completion: @escaping ([Words]?, NSError?) -> Void)
-
-```
-- words that often follow "drink" in a sentence, that start with the letter w
-```swift
-public func wordThatOften(follow: String, start: String, completion: @escaping ([Words]?, NSError?) -> Void)
-```
-- words that are triggered by (strongly associated with) the word "cow"
-```swift
-public func wordsThatAreTriggered(by: String, completion: @escaping ([Words]?, NSError?) -> Void)
-```
-- suggestions for the user if they have typed in rawand so far
-```swift
-public func suggestionsBased(into: String, completion: @escaping ([Words]?, NSError?) -> Void)
-```
 ## License
 
-datamuse-swift is released under the MIT license. See [LICENSE](https://github.com/ezefranca/datamuse-swift/blob/master/LICENSE) for details.
+`datamuse-swift` is released under the MIT license. See [LICENSE](https://github.com/ezefranca/datamuse-swift/blob/master/LICENSE) for details.
