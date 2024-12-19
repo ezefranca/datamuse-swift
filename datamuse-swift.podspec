@@ -9,12 +9,11 @@ Pod::Spec.new do |s|
   s.source = { :git => "https://github.com/ezefranca/datamuse-swift.git", :tag => s.version.to_s }
 
   # Updated platform versions for modern concurrency features
-  s.platforms = {
+    s.platforms = {
     :ios => "15.0",
     :osx => "12.0",
-    :tvos => "15.0",
     :watchos => "8.0"
-  }
+    }
 
   s.default_subspec = "Core"
 
